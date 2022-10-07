@@ -18,7 +18,8 @@ function downloadWithFilename(event) {
   let imageElement = postToolbar.querySelector('[download]');
   console.log(imageElement);
   
-  let (source, filename) = imageElement.href, imageElement.download;
+  let source = imageElement.href;
+  let filename = imageElement.download;
   console.log(`Source: ${source}\nFilename: ${filename}`);
   
   downloadFile(source, filename);
