@@ -5,7 +5,7 @@
 // @description Download files from Desuarchive with filename
 // @match       https://desuarchive.org/*
 // @version     0.2.0
-// @author      undefined
+// @author      Joseph Diza
 // @require     https://cdn.jsdelivr.net/combine/npm/@violentmonkey/dom@2,npm/@violentmonkey/ui@0.7
 // @grant       GM_addStyle
 // ==/UserScript==

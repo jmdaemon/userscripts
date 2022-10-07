@@ -1,6 +1,7 @@
 {
   "name": "desuarchive-download",
   "version": "0.2.0",
+  "author": "Joseph Diza",
   "description": "Download files from Desuarchive with filename",
   "packageManager": "yarn@3.2.3",
   "scripts": {
