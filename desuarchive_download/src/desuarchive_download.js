@@ -16,19 +16,15 @@ function downloadWithFilename(event) {
   let btn_download = event.currentTarget;
   let postToolbar = btn_download.parentElement;
   let imageElement = postToolbar.querySelector('[download]');
-  console.log(imageElement);
   
   let source = imageElement.href;
   let filename = imageElement.download;
-  console.log(`Source: ${source}\nFilename: ${filename}`);
   
   downloadFile(source, filename);
 }
 
 const css_class_post_toolbar = '.post_file_controls';
 const toolbar_file_posts = document.querySelectorAll(css_class_post_toolbar);
-console.log(`Post Toolbar: ${toolbar_file_posts.length}`)
-console.log(toolbar_file_posts);
 
 for (let postIndex = 0; postIndex < toolbar_file_posts.length; postIndex++) {
   // Create the button
@@ -38,7 +34,6 @@ for (let postIndex = 0; postIndex < toolbar_file_posts.length; postIndex++) {
   
   // Register the callback
   btn_download.addEventListener('click', downloadWithFilename, true);
-  console.log(btn_download);
 
   // Add the btn to every post
   let postToolbar = toolbar_file_posts[postIndex];
