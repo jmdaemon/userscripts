@@ -1,9 +1,3 @@
-/*
-function insertAfter(newNode, existingNode) {
-    existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
-}
-*/
-
 function downloadFile(url, fileName) {
   fetch(url, { method: 'get', mode: 'no-cors', referrerPolicy: 'no-referrer' })
     .then(res => res.blob())
@@ -19,52 +13,34 @@ function downloadFile(url, fileName) {
 };
 
 function downloadWithFilename(event) {
-  var btn_download = event.currentTarget;
-  var postToolbar = btn_download.parentElement;
-  var imageElement = postToolbar.querySelector('[download]');
+  let btn_download = event.currentTarget;
+  let postToolbar = btn_download.parentElement;
+  let imageElement = postToolbar.querySelector('[download]');
   console.log(imageElement);
   
-  // console.log(imageElement.dataset);
-  var source = imageElement.href;
-  var filename = imageElement.download;
+  let (source, filename) = imageElement.href, imageElement.download;
   console.log(`Source: ${source}\nFilename: ${filename}`);
   
   downloadFile(source, filename);
 }
 
-var css_class_post_toolbar = '.post_file_controls';
-var css_class_post_filename = '.post_file_filename';
-
-var toolbar_file_posts = document.querySelectorAll(css_class_post_toolbar);
-var toolbar_file_post_filenames = document.querySelectorAll(css_class_post_filename);
-
+const css_class_post_toolbar = '.post_file_controls';
+const toolbar_file_posts = document.querySelectorAll(css_class_post_toolbar);
 console.log(`Post Toolbar: ${toolbar_file_posts.length}`)
 console.log(toolbar_file_posts);
-console.log(`Post Filenames: ${toolbar_file_post_filenames.length}`)
-console.log(toolbar_file_post_filenames);
 
-// Register the callback
-// document.addEventListener('click', downloadWithFilename);
-
-for (var postIndex = 0; postIndex < toolbar_file_posts.length; postIndex++) {
-  // Make the button
-  var btn_download = document.createElement('a');
+for (let postIndex = 0; postIndex < toolbar_file_posts.length; postIndex++) {
+  // Create the button
+  let btn_download = document.createElement('a');
   btn_download.classList.add('btnr', 'parent');
   btn_download.textContent = 'Download';
-  // TODO: Add actual button with icon
-  // var btn_download_icon = document.createElement('i');
-  // btn_download_icon.classList.add('icon-download-alt');
-  // btn_download.append(btn_download_icon)
   
-  // Add the callback
+  // Register the callback
   btn_download.addEventListener('click', downloadWithFilename, true);
   console.log(btn_download);
 
   // Add the btn to every post
   
-  // toolbar_file_posts[postIndex].append(btn_download);
-  var postToolbar = toolbar_file_posts[postIndex];
-  var postFilename = toolbar_file_post_filenames[postIndex];
-  //insertAfter(postFilename, btn_download);
+  let postToolbar = toolbar_file_posts[postIndex];
   postToolbar.append(btn_download);
 }
