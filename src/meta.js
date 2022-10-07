@@ -2,7 +2,7 @@
 // @name        process.env.NAME
 // @namespace   Desuarchive Download
 // @description process.env.DESC
-// @match       *://*/*
+// @match       https://desuarchive.org/*
 // @grant       GM_addStyle
 // @version     process.env.VERSION
 // @author      process.env.AUTHOR

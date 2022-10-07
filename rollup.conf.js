@@ -4,8 +4,7 @@ const userscript = require('rollup-plugin-userscript');
 const pkg = require('./package.json');
 
 const DIST = 'dist';
-const FILENAME = 'index';
-//const FILENAME = `${pkg.name}-${pkg.version}`;
+const FILENAME = `${pkg.name}-${pkg.version}`;
 
 const bundleOptions = {
   extend: true,
@@ -29,8 +28,8 @@ const rollupConfig = [
         userscript(
           path.resolve('src/meta.js'),
           meta => meta
-            //.replace('process.env.NAME', pkg.name)
-            //.replace('process.env.DESC', pkg.description)
+            .replace('process.env.NAME', pkg.name)
+            .replace('process.env.DESC', pkg.description)
             .replace('process.env.VERSION', pkg.version)
             .replace('process.env.AUTHOR', pkg.author),
         ),

@@ -41,7 +41,6 @@ for (let postIndex = 0; postIndex < toolbar_file_posts.length; postIndex++) {
   console.log(btn_download);
 
   // Add the btn to every post
-  
   let postToolbar = toolbar_file_posts[postIndex];
   postToolbar.append(btn_download);
 }
