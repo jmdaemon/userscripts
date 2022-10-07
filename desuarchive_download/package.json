@@ -1,6 +1,6 @@
 {
   "name": "desuarchive-download",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Download files from Desuarchive with filename",
   "packageManager": "yarn@3.2.3",
   "scripts": {
