@@ -5,6 +5,7 @@ const pkg = require('./package.json');
 
 const DIST = 'dist';
 const FILENAME = `${pkg.name}-${pkg.version}`;
+const RELEASE = pkg.name;
 
 const bundleOptions = {
   extend: true,
@@ -38,6 +39,7 @@ const rollupConfig = [
     output: {
       format: 'iife',
       file: `${DIST}/${FILENAME}.user.js`,
+      file: `${DIST}/${RELEASE}.user.js`,
       ...bundleOptions,
     },
   },
