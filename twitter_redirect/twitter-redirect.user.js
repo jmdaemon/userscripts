@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name        Redirect to nitter
+// @name        Twitter Redirect
 // @version     1.0
-// @description Automatically redirect from twitter to nitter
+// @description Automatically redirects from twitter to nitter
 // @match       https://twitter.com/*
 // ==/UserScript==
 
