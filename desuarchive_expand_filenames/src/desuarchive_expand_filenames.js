@@ -25,6 +25,7 @@ const fold_filename = (event) => {
 function init() { 
   var post_image_filenames = document.querySelectorAll('.post_file_filename');
   console.log('[init]');
+  var index = 0;
   for (index in post_image_filenames) {
     var post = post_image_filenames[index];
     
