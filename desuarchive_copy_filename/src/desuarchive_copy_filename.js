@@ -34,19 +34,11 @@ function copy_to_clipboard(text) {
   });
 }
 
-//const copy_filename = (event) => {
-function copy_filename(event) {
-  console.log(event);
-  //let post = event.currentTarget
-  console.log(event.target);
-  console.log(event.target.parentNode.parentNode);
-  let parent = event.target.parentNode.parentNode;
-  //let post = parent.closest('.post_file_filename')
+function copy_filename() {
   let post = parent.childNodes[3];
   let filename = post.title;
-  console.log(filename);
   copy_to_clipboard(filename);
-  console.log(`Copied ${filename} to clipboard!`);
+  console.log(`Copied "${filename}" to clipboard!`);
 }
 
 function init() { 
