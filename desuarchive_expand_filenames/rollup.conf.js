@@ -6,7 +6,7 @@ const pkg = require('./package.json');
 // Constants
 const DIST = 'dist';
 const FILENAME = `${pkg.name}-${pkg.version}`;
-//const RELEASE = pkg.name;
+const RELEASE = pkg.name;
 
 const bundleOptions = {
   extend: true,
@@ -17,46 +17,39 @@ const postcssOptions = {
   inject: false,
   minimize: true,
 };
+const inputOptions = {
+  input: 'src/index.js',
+  plugins: [
+    ...getRollupPlugins({
+      esm: true,
+      minimize: false,
+      postcss: postcssOptions,
+    }),
+    userscript(
+      path.resolve('src/meta.js'),
+      meta => meta
+        .replace('process.env.NAME', pkg.name)
+        .replace('process.env.DESC', pkg.description)
+        .replace('process.env.VERSION', pkg.version)
+        .replace('process.env.AUTHOR', pkg.author),
+    ),
+  ],
+}
 const rollupConfig = [
   {
-    input: {
-      input: 'src/index.js',
-      plugins: [
-        ...getRollupPlugins({
-          esm: true,
-          minimize: false,
-          postcss: postcssOptions,
-        }),
-        userscript(
-          path.resolve('src/meta.js'),
-          meta => meta
-            .replace('process.env.NAME', pkg.name)
-            .replace('process.env.DESC', pkg.description)
-            .replace('process.env.VERSION', pkg.version)
-            .replace('process.env.AUTHOR', pkg.author),
-        ),
-      ],
-    },
-    // Output userscripts
+    input: inputOptions,
     output: {
       file: `${DIST}/${FILENAME}.user.js`,
       format: 'iife',
       ...bundleOptions
     }
-    /*
-    output: [
-    {
-      file: `${DIST}/${FILENAME}.user.js`,
-      format: 'iife',
-      ...bundleOptions
-    },
-    {
+  }, {
+    input: inputOptions,
+    output: {
       file: `${DIST}/${RELEASE}.user.js`,
       format: 'iife',
       ...bundleOptions
     }
-    ]
-    */
   },
 ];
 
