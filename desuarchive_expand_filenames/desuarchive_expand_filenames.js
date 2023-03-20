@@ -1,4 +1,3 @@
-//const expand_filename = (post) => {
 const expand_filename = (event) => {
   console.log('[expand_filename]');
 
@@ -7,21 +6,6 @@ const expand_filename = (event) => {
 
   console.log(post);
   var title = post.title;
-
-  //var folded = post.childNodes.innerHTML;
-  //post.folded = folded;
-
-  //var folded = get_element_text(post.childNodes);
-  //post.folded = folded;
-
-  //var folded = post.childNodes.text;
-  //post.folded = folded;
-
-  //var folded = post.childNodes.data;
-  //post.folded = folded;
-
-  //console.log('Folded: ' + folded);
-
   post.innerHTML = title;
 }
 
