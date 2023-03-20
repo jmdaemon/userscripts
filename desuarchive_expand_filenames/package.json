@@ -5,7 +5,7 @@
   "description": "Expand post filenames on mouse hover",
   "packageManager": "yarn@3.2.3",
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "cd .. && husky install",
     "dev": "rollup -wc rollup.conf.js",
     "clean": "del-cli dist",
     "build:js": "rollup -c rollup.conf.js",
