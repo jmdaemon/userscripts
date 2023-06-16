@@ -3,6 +3,9 @@
 // @namespace   Desuarchive Download
 // @description process.env.DESC
 // @include     *://desuarchive.org/*
+// @updateURL   https://github.com/jmdaemon/userscripts/raw/master/desuarchive_download/dist/desuarchive_download.user.js
+// @downloadURL https://github.com/jmdaemon/userscripts/raw/master/desuarchive_download/dist/desuarchive_download.user.js
+
 // @grant       GM_addStyle
 // @version     process.env.VERSION
 // @author      process.env.AUTHOR
