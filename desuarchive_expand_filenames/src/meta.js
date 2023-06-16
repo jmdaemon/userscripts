@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        process.env.NAME
+// @name        Desuarchive Expand Filenames
 // @namespace   Desuarchive Expand Filenames
 // @description process.env.DESC
 // @include       *://desuarchive.org/*
