@@ -1,6 +1,6 @@
 {
   "name": "ponebooru_download_shortcut",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Adds a ctrl+d shortcut to download images on various pony boorus",
   "author": "",
   "license": "MIT",
