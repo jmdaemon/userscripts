@@ -1,7 +1,7 @@
 {
   "name": "desuarchive-expand-filenames",
   "version": "0.1.0",
-  "author": "Joseph Diza",
+  "author": "",
   "description": "Expand post filenames on mouse hover",
   "packageManager": "yarn@3.2.3",
   "scripts": {
