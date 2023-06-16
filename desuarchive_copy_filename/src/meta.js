@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        process.env.NAME
+// @name        Desuarchive Copy Filename
 // @namespace   Desuarchive Copy Filename
 // @description process.env.DESC
 // @include       *://desuarchive.org/*
