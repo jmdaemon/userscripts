@@ -2,7 +2,10 @@
 // @name        Ponebooru Download Shortcut
 // @namespace   Ponebooru Download Shortcut
 // @description process.env.DESC
-// @match       https://ponerpics.org/*:https://twibooru.org/*:https://ponybooru.org/*:https://derpibooru.org/*
+// @include     *://ponerpics.org/*
+// @include     *://twibooru.org/*
+// @include     *://ponybooru.org/*
+// @include     *://derpibooru.org/*
 // @grant       GM_addStyle
 // @version     process.env.VERSION
 // @author      process.env.AUTHOR
