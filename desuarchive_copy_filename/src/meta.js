@@ -2,7 +2,10 @@
 // @name        process.env.NAME
 // @namespace   Desuarchive Copy Filename
 // @description process.env.DESC
-// @match       https://desuarchive.org/*
+// @include       *://desuarchive.org/*
+// @updateURL   https://github.com/jmdaemon/userscripts/raw/master/ponebooru_download_shortcut/dist/ponebooru_download_shortcut.user.js
+// @downloadURL https://github.com/jmdaemon/userscripts/raw/master/ponebooru_download_shortcut/dist/ponebooru_download_shortcut.user.js
+
 // @grant       GM_addStyle
 // @version     process.env.VERSION
 // @author      process.env.AUTHOR
