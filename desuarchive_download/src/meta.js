@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name        process.env.NAME
+// @name        Desuarchive Download
 // @namespace   Desuarchive Download
 // @description process.env.DESC
-// @match       https://desuarchive.org/*
+// @include     *://desuarchive.org/*
 // @grant       GM_addStyle
 // @version     process.env.VERSION
 // @author      process.env.AUTHOR
