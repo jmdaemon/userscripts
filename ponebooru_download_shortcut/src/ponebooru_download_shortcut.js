@@ -10,8 +10,8 @@ function download_via_shortcut(e) {
   isKeyPressed[e.key] = true;
 
   if (isKeyPressed['d'] && e.ctrlKey) {
-    // Disable browser shortcuts temporarily
-    e.stopImmediatePropagation();
+    e.stopImmediatePropagation(); // Buy time to run next command
+    e.preventDefault(); // Prevent browser keyboard shortcut from executing
 
     var download_btn = document.querySelectorAll(DOWNLOAD_BTN_SELECTOR)[0];
     download_btn.click();
