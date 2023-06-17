@@ -6,13 +6,13 @@ var isKeyPressed = {
 const DOWNLOAD_BTN_SELECTOR = 'a[title="Download (tags in filename)"]';
 
 function download_via_shortcut(e) {
-  // Disable browser shortcuts
-  e.preventDefault();
-
   // Track down key click
   isKeyPressed[e.key] = true;
 
   if (isKeyPressed['d'] && e.ctrlKey) {
+    // Disable browser shortcuts temporarily
+    e.stopImmediatePropagation();
+
     var download_btn = document.querySelectorAll(DOWNLOAD_BTN_SELECTOR)[0];
     download_btn.click();
   }
