@@ -32,7 +32,6 @@ function downloadFile(url, fileName) {
     URL.revokeObjectURL(href);
   });
 }
-
 function downloadWithFilename(event) {
   var btn_download = event.currentTarget;
   var postToolbar = btn_download.parentElement;
@@ -41,18 +40,18 @@ function downloadWithFilename(event) {
   var filename = imageElement.download;
   downloadFile(source, filename);
 }
-
 var css_class_post_toolbar = '.post_file_controls';
 var toolbar_file_posts = document.querySelectorAll(css_class_post_toolbar);
-
 for (var postIndex = 0; postIndex < toolbar_file_posts.length; postIndex++) {
   // Create the button
   var btn_download = document.createElement('a');
   btn_download.classList.add('btnr', 'parent');
-  btn_download.textContent = 'Download'; // Register the callback
+  btn_download.textContent = 'Download';
 
-  btn_download.addEventListener('click', downloadWithFilename, true); // Add the btn to every post
+  // Register the callback
+  btn_download.addEventListener('click', downloadWithFilename, true);
 
+  // Add the btn to every post
   var postToolbar = toolbar_file_posts[postIndex];
   postToolbar.append(btn_download);
 }
